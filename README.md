@@ -1,115 +1,54 @@
-Marketing Intelligence Dashboard
+# Marketing Intelligence Dashboard:-
 
-This project is an interactive Business Intelligence (BI) dashboard built with Streamlit. It is designed to help a business stakeholder analyze marketing performance and its direct connection to business outcomes. The dashboard integrates campaign-level data from Facebook, Google, and TikTok with daily business performance data. 
+A comprehensive Streamlit-based dashboard for analyzing marketing performance and its direct connection to business outcomes, using data from platforms like Facebook, Google, and TikTok.
 
-The primary goal is to move beyond surface-level reporting by providing actionable insights, advanced visualizations, and context-aware recommendations that inform strategic decisions. 
+## Features:-
 
-Key Features
+- **Advanced KPIs**: Calculates and monitors key metrics including ROAS (Return on Ad Spend), CAC (Customer Acquisition Cost), CTR (Click-Through Rate), and MER (Marketing Efficiency Ratio).
+- **Executive Summary**: A high-level overview of total spend, revenue, profit, and overall marketing effectiveness.
+- **Channel Deep Dive:**: Performance Matrix: A unique bubble chart visualizing ROAS vs. CTR, with bubble size representing total spend.
+Efficiency Radar Chart: Compares platforms across multiple normalized KPIs for a true apples-to-apples performance view.
+- **Geographic Analysis**: A US choropleth map visualizes ROAS by state to identify high-performing regions.
+- **Automated Insights**: An "Intelligent Analytics" tab that generates rule-based recommendations and performance alerts (e.g., "Low ROAS," "Budget reallocation suggestions").
+- **Data Quality Monitoring**: A dedicated tab that assesses the underlying data for completeness, freshness, and consistency, building trust in the insights.
+- **Data Export**: Allows users to download filtered data, KPI summaries, and top-campaign lists as CSV files.
 
-The dashboard is organized into a multi-tab interface for a clear and structured user experience.
+## Stack Used:-
 
-    Core Functionality
+This project is built on a robust Python toolkit. Pandas serves as the backbone for data manipulation and analysis, while NumPy provides essential support for numerical computing. For data visualization, the dashboard leverages Plotly to create rich, interactive charts and relies on Matplotlib for foundational plotting and color gradient generation. SciPy is included for advanced statistical analysis. The entire user interface is built and served using Streamlit, an open-source framework for creating and sharing web apps for data science.
 
-        Unified Data Model: Integrates four distinct datasets into a single, analysis-ready source. 
+## Prerequisites:-
 
-    Derived Metrics Engine: Automatically calculates essential KPIs on-the-fly, including Return on Ad Spend (ROAS), Customer Acquisition Cost (CAC), Click-Through Rate (CTR), Cost Per Click (CPC), and profit margins.
+- Python 3.8 or higher
+- pip package manager
 
-    Dynamic Filtering: All analytics can be filtered by a specific date range and by advertising platform, allowing for granular analysis.
+## Installation:-
 
-Tab 1: Executive Summary
+1. **Clone the repository**
+   ```bash
+   https://github.com/a5xwin/Assessment-1-Marketing-Intelligence-Dashboard
+   cd Assessment-1-Marketing-Intelligence-Dashboard-main
+   ```
 
-    Provides a high-level overview of business health and marketing efficiency.
+2. **Install required packages**
+   ```bash
+   pip install streamlit pandas plotly numpy
+   ```
 
-    Features KPI cards for key metrics like Total Spend, Total Revenue, Gross Profit, overall ROAS, and overall CAC.
+3. **Getting Your Data Ready**
+   - Ensure you have a data folder in the root directory.
+   - Place the following four CSV files inside the data folder:
+     - `Facebook.csv` - Facebook campaign-level marketing data
+     - `Google.csv` - Google campaign-level marketing data
+     - `TikTok.csv` - TikTok campaign-level marketing data
+     - `business.csv` - Daily business performance data
 
-    Includes a time-series chart visualizing the trends of revenue, profit, and ad spend.
+## Testing the Application:-
+   - Visit: https://assessment-1-marketing-intelligence-dashboard-ash.streamlit.app/
 
-Tab 2: Channel Analysis
+## Running the Application Locally
 
-    Delivers a comparative analysis of performance across Facebook, Google, and TikTok.
-
-    Unique Feature: Performance Matrix. An interactive bubble chart that plots platforms based on ROAS (x-axis) and CTR (y-axis). The size of each bubble represents the total spend, providing a multi-dimensional view of channel efficiency.
-
-    Unique Feature: Efficiency Radar Chart. Normalizes disparate KPIs (ROAS, CTR, CPC, CAC) onto a single radar chart to provide a true "apples-to-apples" comparison of each platform's strengths and weaknesses.
-
-Tab 3: Strategy & Geographic Analysis
-
-    Allows for a deep dive into the performance of individual campaigns and tactics.
-
-    Presents a detailed, sortable data table for granular campaign-level analysis.
-
-    Unique Feature: Geographic Performance Analysis. Visualizes where campaigns are most effective through:
-
-        A US Choropleth Map colored by state-level ROAS.
-
-        A horizontal bar chart of the top 10 states by total ad spend.
-
-Tab 4: Business Impact Analysis
-
-    Focuses directly on the assessment's core task: connecting marketing activity to business outcomes. 
-
-        Unique Feature: Correlation Heatmap. A matrix that visualizes the statistical correlation between marketing inputs (e.g., spend, clicks) and business outputs (e.g., orders, revenue, new customers), revealing which marketing actions most strongly influence the bottom line.
-
-        Includes scatter plots with OLS trendlines and R² values to quantify the relationship between daily ad spend and key outcomes like orders and new customer acquisition.
-
-    Tab 5: Performance Highlights & Intelligent Recommendations
-
-        Moves from analysis to action by automatically surfacing key takeaways.
-
-        Unique Feature: Automated Insights Engine. Generates context-aware, rule-based text outputs based on the filtered data. It provides strategic recommendations (e.g., "Consider reallocating budget from Platform X to Platform Y") and performance alerts (e.g., "Low ROAS Alert: Overall ROAS is below the profitability threshold").
-
-        Includes a "Campaign Spotlight" that automatically identifies and displays the top 10 performing campaigns by ROAS.
-
-    Tab 6: Data Quality & Exports
-
-        A unique section focused on building trust in the data and providing utility.
-
-        Unique Feature: Data Quality Monitor. Assesses the filtered data for completeness, freshness, and consistency. It generates an overall quality score and flags specific issues like negative spend, impossible CTR values, or stale data.
-
-        Data Export Center: Allows the user to download a KPI summary, the full filtered dataset, or a list of top-performing campaigns as a CSV file.
-
-Technical Implementation
-
-    Framework: Streamlit
-
-    Core Libraries: Pandas for data manipulation, Plotly for advanced interactive visualizations.
-
-    Data Pipeline: The data preparation process involves:
-
-        Loading four separate CSV files.
-
-        Cleaning and standardizing column names.
-
-        Appending a platform identifier to each marketing dataset.
-
-        Merging marketing and business dataframes on the date column.
-
-        Calculating a suite of derived metrics for analysis.
-
-    Styling: The dashboard uses custom CSS to inject unique fonts and create a polished, professional layout, demonstrating attention to the final product's usability.
-
-How to Run Locally
-
-    Prerequisites: Python 3.8+ installed.
-
-    Clone Repository:
-    Bash
-
-git clone <your-repo-url>
-cd <your-repo-name>
-
-Install Dependencies:
-Bash
-
-pip install -r requirements.txt
-
-Directory Structure:
-
-    Ensure the CSV files are in a /data subdirectory.
-
-    Ensure the font files (thin.ttf, bold.ttf) are in the root directory.
-
-Run the App:
-Bash
-
+```bash
 streamlit run app.py
+```
+
