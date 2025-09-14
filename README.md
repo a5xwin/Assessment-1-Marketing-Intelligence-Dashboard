@@ -1,28 +1,67 @@
-# Marketing Intelligence Dashboard:-
+# Marketing Intelligence Dashboard
 
 A comprehensive Streamlit-based dashboard for analyzing marketing performance and its direct connection to business outcomes, using data from platforms like Facebook, Google, and TikTok.
 
-## Features:-
+## Features
 
-- **Advanced KPIs**: Calculates and monitors key metrics including ROAS (Return on Ad Spend), CAC (Customer Acquisition Cost), CTR (Click-Through Rate), and MER (Marketing Efficiency Ratio).
-- **Executive Summary**: A high-level overview of total spend, revenue, profit, and overall marketing effectiveness.
-- **Channel Deep Dive:**: Performance Matrix: A unique bubble chart visualizing ROAS vs. CTR, with bubble size representing total spend.
-Efficiency Radar Chart: Compares platforms across multiple normalized KPIs for a true apples-to-apples performance view.
-- **Geographic Analysis**: A US choropleth map visualizes ROAS by state to identify high-performing regions.
-- **Automated Insights**: An "Intelligent Analytics" tab that generates rule-based recommendations and performance alerts (e.g., "Low ROAS," "Budget reallocation suggestions").
-- **Data Quality Monitoring**: A dedicated tab that assesses the underlying data for completeness, freshness, and consistency, building trust in the insights.
-- **Data Export**: Allows users to download filtered data, KPI summaries, and top-campaign lists as CSV files.
+- **Advanced KPIs**:  
+  - Calculates and monitors ROAS (Return on Ad Spend).  
+  - Tracks CAC (Customer Acquisition Cost).  
+  - Monitors CTR (Click-Through Rate).  
+  - Evaluates MER (Marketing Efficiency Ratio).  
 
-## Stack Used:-
+- **Executive Summary**:  
+  - Provides a high-level overview of total spend.  
+  - Summarizes revenue and profit.  
+  - Highlights overall marketing effectiveness.  
+
+- **Channel Deep Dive**:  
+  - **Performance Matrix**:  
+    - Bubble chart visualizing ROAS vs. CTR.  
+    - Bubble size represents total spend.  
+  - **Efficiency Radar Chart**:  
+    - Compares platforms across multiple KPIs.  
+    - Normalized values for apples-to-apples comparison.  
+
+- **Geographic Analysis**:  
+  - US choropleth map visualization.  
+  - Shows ROAS by state.  
+  - Helps identify high-performing regions.  
+
+- **Automated Insights**:  
+  - "Intelligent Analytics" tab generates rule-based recommendations.  
+  - Provides performance alerts (e.g., "Low ROAS").  
+  - Suggests budget reallocation and optimization strategies.  
+
+- **Data Quality Monitoring**:  
+  - Dedicated tab for assessing data completeness.  
+  - Monitors data freshness.  
+  - Ensures consistency for trustworthy insights.  
+
+- **Data Export**:  
+  - Download filtered data as CSV files.  
+  - Export KPI summaries.  
+  - Export top-campaign lists.  
+
+- **Custom Branding**:  
+  - Supports custom platform logo integration.  
+  - Provides a branded and professional dashboard look.  
+
+
+## Stack Used
 
 This project is built on a robust Python toolkit. Pandas serves as the backbone for data manipulation and analysis, while NumPy provides essential support for numerical computing. For data visualization, the dashboard leverages Plotly to create rich, interactive charts and relies on Matplotlib for foundational plotting and color gradient generation. SciPy is included for advanced statistical analysis. The entire user interface is built and served using Streamlit, an open-source framework for creating and sharing web apps for data science.
 
-## Prerequisites:-
+## Prerequisites
 
 - Python 3.8 or higher
 - pip package manager
 
-## Installation:-
+## App Working Live Demo
+   - Visit: https://assessment-1-marketing-intelligence-dashboard-ash.streamlit.app/
+
+
+## Installing Locally
 
 1. **Clone the repository**
    ```bash
@@ -43,12 +82,9 @@ This project is built on a robust Python toolkit. Pandas serves as the backbone 
      - `TikTok.csv` - TikTok campaign-level marketing data
      - `business.csv` - Daily business performance data
 
-## Testing the Application:-
-   - Visit: https://assessment-1-marketing-intelligence-dashboard-ash.streamlit.app/
+4. **Running the application**
+   ```bash
+   streamlit run app.py
+   ```
 
-## Running the Application Locally
-
-```bash
-streamlit run app.py
-```
 
